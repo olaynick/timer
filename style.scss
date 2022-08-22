@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: Kdam Thmor Pro, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(232, 136, 53);
+}
+
+.container {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.timer{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__block {
+        width: 150px;
+        .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 95px;
+        }
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(151, 84, 39);
+            background: rgba(151, 76, 39, 0.333);
+            border-radius: 5px;
+            padding: 2px 0;
+        }
+    }
+}
+
+.date__box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .start{
+        position: relative;
+        cursor: pointer;
+        color: white;
+        background-color: rgba(151, 63, 39, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 150px;
+        font-size: 18px;
+        transition: .3s ease-in-out;
+        &::after{
+            content: "";
+            width: 140px;
+            height: 3px;
+            border-radius: 25px;
+            background-color: rgb(151, 78, 39);
+            bottom: 0;
+            left: 5px;
+            bottom: 0;
+            transition: .1s ease-in-out;
+        }
+        &:hover::after{
+            position: absolute;
+            transition: .1s ease-in-out;
+            bottom: -5px; 
+            display: block;
+        }
+        &:hover{
+            color: rgba(255, 255, 255, 0.9);
+            transition: .3s ease-in-out;
+            background-color: rgb(151, 82, 39);
+        }
+}
+.date__end {
+    border: none;
+    background-color: rgba(151, 63, 39, 0.5);
+    border-radius: 5px;
+    color: white;
+    width: 150px;
+    height: 48px;
+    font-size: 18px;
+    padding: 10px;
+    outline: none;
+    }
+    ::-webkit-calendar-picker-indicator {
+        background: #000;;}
+ }
